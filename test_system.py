@@ -17,7 +17,7 @@ def test_code():
     json_response=response.json()
     assert(json_response["code"]==404)
 
-# Validates that the server returns the expected error message in the "message" field of the JSON response.
+# Validates that the server returns the expected error message in the "message" field of the JSON response. /test_message checks that the message is "HTTP 404 Not Found", which indicates that the server is correctly handling requests to non-existent endpoints.
 def test_message():
     response=requests.get("http://localhost:8085")
     json_response=response.json()
